@@ -38,6 +38,8 @@
                     <h1 class="text-5xl font-extrabold tracking-wider text-center text-gray-600">
                         {{ config('app.name') }}
                     </h1>
+                    {{\App\Models\User::count()}} <br>
+                    {{\App\Models\User::where('tenant_id', auth()->user()?->tenant_id)->count()}}
 
                     <ul class="list-reset">
                         <li class="inline px-4">
